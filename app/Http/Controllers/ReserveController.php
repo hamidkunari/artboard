@@ -42,23 +42,21 @@ class ReserveController extends Controller
             'company_no' => 'required',
             'number' => 'required',
             'checkbox' => 'required',
-            'location' =>'required'
-            
+            'location' => 'required'
         ]);
         
         $form_data = array(
-            'name'       =>   $request->name,
-            'email'     => $request->email,
-            'number'        =>   $request->number,
-            'company'            =>   $request->company,
+            'name'       => $request->name,
+            'email'      => $request->email,
+            'number'     => $request->number,
+            'company'    => $request->company,
             'company_no' => $request->company_no,
-            'location' => $request->location
+            'location'   => $request->location
         );
       
         Reserve::create($form_data);
 
-        return redirect('pre-launch')->with('success', 'Reserve Added successfully.');
-
+        return redirect('pre-launch')->with('success', 'Thank you for your interest! Our staff will contact you soon.');
     }
 
 
