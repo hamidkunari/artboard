@@ -40,26 +40,18 @@
     <div class="row">
 <div class="col-lg-4"></div>
 <div class="col-lg-6">
-<img class="text-center logo" height="200" width="200"   src="{{asset('media/logo2.png')}}">
+<img class="text-center logo"    src="{{asset('media/bani.jpeg')}}">
 
 <div class="box text-center">
 <h2 style="margin-left: -30px">Welcome</h2>
-<p>Join us for the 2020 gathering of event planners, designers, and vendors! Attend a workshop or listen to one of our amazing keynote speakers. Network with industry professionals from across the world.</p>
-</div>
-<h2 class="members" style="text-align:center; margin-left: -100px"><span style="color:#1d86c7">USB MEMBERSHIP BENEFITS
-</span></h2>
-<div class="row">
-<div class="col-lg-8">
-    <img class="sub" src="{{asset('event/eimg.png')}}">
-   
+<p>Hai usahawan PKS! Perkasakan potensi sebenar bisnes anda bersama Usahawan Social Biz (USB).
 
-</div>
-<div class="col-lg-4">
-    <h2 class="member"  style="text-align:left; margin-left: -150px; margin-top: 50px; color:black"><span style="color:#4A235A">USB </span>MEMBERS FEE<span style="color:#4A235A"> RM 270.00
-</span></h2>
+Usahawan Social Biz membawakan seminar PKS maya yang menempatkan bisnes setempat untuk sokongan, latihan, perangkaian, media dan banyak lagi. Dengan menjadi ahli USB, temui tokoh usahawan, program eksklusif dan akses media yang tidak dapat anda perolehi di tempat lain! Inilah penyelesaian bisnes menang-menang yang jangan anda lepaskan. 
 
+Daftar sekarang untuk mendapat maklumat lanjut mengenai pelancaran USB yang bakal berlaku pada 18 Ogos ini.</p>
 </div>
-</div>
+
+
 
 
 
@@ -68,62 +60,6 @@
 </div>
 </div>
 
-<div class="row">
-<div class="col-lg-6">
-     <h2 class="sub1" style="padding-left: 20px; font-size: 15px">#USBSUPPORTLOKAL</h2>
-<ul class="list" style="line-height: 1.3; padding-left:100px;">
-  <li>Free 1 x FB posting in HM FB worth of RM 7,000</li>
-  <li>Free 1 x FB posting in USB FB page worth of RM 1,000</li>
-  <li>One Year Subscription of NSTP ePaper</li>
-  <li>SME Editorial Content in Omnia Malay Network - BH/HM worth of RM 5,000</li>
-
-</ul>  
-<!-- second sub -->
-<h2 class="sub1"  style="padding-left: 20px; font-size: 15px">#USB SPECIAL WORKSHOP AT OMNIA COACHING CLINIC
-</h2>
-<ul class="list" style="line-height: 1.3; padding-left:100px;">
-  <li>Free 1 x Biz Management Workshop by renowned speaker
-</li>
-  <li>Free 1 x Online Marketing Strategy Coaching by renowned speaker.
-</li>
-
-</ul> 
-
-</div>
-<div class="col-lg-6">
-    <!-- third sub -->
-<h2 class="sub1" style="padding-left: 20px; font-size: 15px">USB FINANCIAL PARTNER</h2>
-<ul class="list1"  style="line-height: 1.3; padding-right:50px;">
-  <li>Exclusive loan with Omnia SME Finance Partner & get Media advertising 
-</li>
-  <li>benefits for “qualified” members
-</li>
-</ul> 
-<!-- fifth sub -->
-<h2 class="sub1" style="padding-left: 20px; font-size: 15px">#USB TECH PARTNER </h2>
-<ul class="list1"  style="line-height: 1.3; padding-right:50px;">
-  <li>Exclusive E-commerce platform & Special rate for USB Biz System Software.
-
-</ul> 
-<!-- third sub -->
-<h2 class="sub1" style="padding-left: 20px; font-size: 15px;">#USB VIP MEDIA PACKAGES
-
-</h2>
-<ul class="list1" style="line-height: 1.3; padding-right:50px;">
-  <li>Special discount up to 70% on SME Media Packages from Media Prima Omnia
-
-</li>
-  <li>Creative Services for advertisement design, copywriting and video production with special price.
-
-</li>
-
-</ul>
-</div>
-<img class="text-center ban" src="{{asset('event/Picture1.png')}}">
-
-
-
-</div>
 
 
 
@@ -131,7 +67,7 @@
    <div class="col-xs-12 col-lg-12 form">
     <h1 class="text-center" ><small style="color:red; border-bottom: 2px solid  red; font-size: 28px;">Reserve</small> Here</h1><br>
     @if ($message = Session::get('success'))
-        <div class="alert alert-success">
+        <div height="40" class="alert alert-info">
             <p>{{ $message }}</p>
         </div>
         
@@ -143,35 +79,53 @@
         <div class="col-lg-6">
              <div class="form-group">
     <label for="first"> Name / Nama</label>
-    <div class="col-lg-8">
+    <div class="col-lg-10">
       <input type="text" class="form-control" name="name" id="first" placeholder="Name / Nama">
+      @error('name')
+    <div style="color:darkred; font-family: poppins">{{ $message }}</div>
+@enderror
     </div>
      <label for="first">Emel / Email</label>
-    <div class="col-lg-8">
+    <div class="col-lg-10">
       <input type="text" class="form-control" name="email" id="first" placeholder="Enter Your Emel / Email">
+      @error('email')
+    <div style="color:darkred; font-family: poppins">{{ $message }}</div>
+@enderror
     </div>
 
   </div>
      <div class="form-group">
     <label style="width: 300px">No Telefon Bimbit / Handphone Number</label>
-    <div class="col-lg-8">
-      <input type="text" class="form-control" name="number" id="first" placeholder="No Telefon Bimbit / Handphone Number">
+    <div class="col-lg-10">
+      <input type="text" class="form-control " name="number" id="first" placeholder="No Telefon Bimbit / Handphone Number">
+       @error('number')
+    <div style="color:darkred; font-family: poppins">{{ $message }}</div>
+@enderror
     </div>
+
+
         </div>
+        
     </div>
-        <div class="col-lg-6">
+        <div class="col-lg-6" style="margin-top: 0px;">
             <div class="form-group">
    <label width="300" for="first">Nama Syarikat / Company Name</label>
-    <div class="col-lg-8">
+    <div class="col-lg-10">
       <input type="text" class="form-control" name="company" id="first" placeholder="Nama Syarikat / Company Name">
+       @error('company')
+    <div style="color:darkred; font-family: poppins">{{ $message }}</div>
+@enderror
     </div>
-       <div class="form-group">
-     <label width="300" for="first">No Pendaftaran Syarikat / Company Registration No</label>
-    <div class="col-lg-8">
+       <div class="form-group" >
+     <label width="300" for="first">No Pendaftaran Syarikat / Co Reg No</label>
+    <div class="col-lg-10">
       <input type="text" class="form-control" name="company_no" id="first" placeholder="No Pendaftaran Syarikat / Company Registration No">
+       @error('company_no')
+    <div style="color:darkred; font-family: poppins">{{ $message }}</div>
+@enderror
     </div>
-     <label for="first"> Lokasi / location</label>
-    <div class="col-lg-8">
+     <label for="first" style="margin-top: 5px;"> Lokasi / location</label>
+    <div class="col-lg-10">
      <select class="form-control" name="location" style="font-size: 13px">
         <option >Choose Location</option>
       <option value="Penang">Penang</option>
@@ -187,16 +141,28 @@
  
 
      </select>
-   
-    </div>
+    
       
 
      </div>
+
  </div>
+  <div class="form-group checkbox">
+    <div class="col-lg-10">
+      <input type="checkbox" value="agree" name="checkbox"> &nbsp <a href="#" style="text-decoration: none;">Term and Condition</a>
+       @error('checkbox')
+    <div style="color:darkred; font-family: poppins">{{ $message }}</div>
+@enderror
+    </div>
+    
+
+        </div>
+
      
 <div class="form-group btn1">
     <div class="col-lg-offset-2 col-lg-10">
-      <button type="submit" class="btn btn-primary" style="font-size: 20px; text-align: center; margin-left: -100px;">Reserve</button>
+        
+      <button type="submit" class="btn btn-primary" style="font-size: 20px; text-align: center; margin-left: -100px;">I'm Interest</button>
     </div>
   </div>
 </form>
@@ -252,16 +218,35 @@ input{
 }
 .logo{
     margin-top: 40px;
+    width: 100%;
+    height: 50%;
+    margin-left: -60px;
+}
+.col-lg-10{
+    margin-bottom: 10px;
 }
 
 /* Desktop only style */
 @media (min-width:768px) {
   .menu-container{height: 60px}
   .form{
-    width: 90%; box-shadow: 0 0 10px; padding: 20px 20px 20px 20px; margin: 0px 50px 100px 50px
+    width: 100%; box-shadow: 0 0 10px; padding: 20px 10px 20px 70px; margin: 0px 0px 100px 0px
   }
   .ban{
     height: 70px; width: 300px; margin-left: 280px;
+  }
+  .list{
+    margin-left: -50px;
+  }
+  .btn1{
+    margin-left: -20px;
+    margin-top: 100px;
+  }
+  label{
+    margin-left: 15px;
+  }
+  .checkbox{
+    margin-left: -380px;
   }
 }
 

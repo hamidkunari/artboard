@@ -21,6 +21,7 @@ class CreateReservesTable extends Migration
             $table->string('company')->nullable();
             $table->string('company_no')->nullable();
             $table->string('location')->nullable();
+            $table->string('checkbox')->nullable();
             $table->timestamps();
         });
     }

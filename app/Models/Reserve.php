@@ -8,6 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class Reserve extends Model
 {
     use HasFactory;
-    protected $fillable  = ['name','email','number','company','company_no','location'];
+    protected $fillable  = ['name','email','number','company','company_no','location','checkbox'];
 
 }

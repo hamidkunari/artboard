@@ -221,6 +221,7 @@ padding: 0;" height="700" width="100%" class="img-fluid" src="{{asset('media/sli
  </div>   
   <!-- End rsvp --> 
       
+      
       <!-- News -->
      <div class="row">
      <h1 class="text-center" ><small style="color:red; border-bottom: 2px solid  red;">USB</small> News</h1>

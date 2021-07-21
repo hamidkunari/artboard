@@ -34,6 +34,17 @@ class ReserveController extends Controller
      */
     public function store(Request $request)
     {
+         $request->validate([
+            'name'    =>  'required',
+            'email'     =>  'required',
+            'number' => 'required',
+            'company' => 'required',
+            'company_no' => 'required',
+            'number' => 'required',
+            'checkbox' => 'required',
+            'location' =>'required'
+            
+        ]);
         
         $form_data = array(
             'name'       =>   $request->name,
@@ -46,7 +57,7 @@ class ReserveController extends Controller
       
         Reserve::create($form_data);
 
-        return redirect('/')->with('success', 'Reserve Added successfully.');
+        return redirect('pre-launch')->with('success', 'Reserve Added successfully.');
 
     }
 
