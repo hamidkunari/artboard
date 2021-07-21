@@ -18,7 +18,8 @@
 			<div class="menu-container" style="background: linear-gradient(to left, #560060,#1312c9);">
 				<div class="grt-menu-row">
 					<div class="grt-menu-logo">
-						<a href="{{ url('/') }}" class="grt-logo"><img height="60" style="margin-bottom: 0px; color:white;" src="{{ asset('media/logo3.png') }}"></a>
+						<a href="{{ url('/') }}" class="grt-logo"><img height="80" style="padding: 5px;" src="{{ asset('media/logo3.png') }}"></a>
+						<span class="float-right" style="padding: 20px 10px;"><img height="30" src="{{ asset('media/omnia-logo.png') }}"></span>
 					</div>
 				</div>
 			</div>
@@ -103,16 +104,20 @@
 									<label for="first"> Lokasi / location</label>
 									<select class="form-control" name="location">
 										<option valu="">- Please Select -</option>
-										<option value="Penang">Penang</option>
-										<option value="Kuala Lumpur">Kuala Lumpur</option>
-										<option value="Perak">Perak</option>
-										<option value="Sarawak">Sarawak</option>
 										<option value="Johor">Johor</option>
-										<option value="Sabah">Sabah</option>
-										<option value="Selangor">Selangor</option>
-										<option value="Melaka">Melaka</option>
 										<option value="Kedah">Kedah</option>
+										<option value="Kelantan">Kelantan</option>
+										<option value="Kuala Lumpur">Kuala Lumpur</option>
+										<option value="Melaka">Melaka</option>
 										<option value="Negeri Sembilan">Negeri Sembilan</option>
+										<option value="Pahang">Pahang</option>
+										<option value="Penang">Penang</option>
+										<option value="Perak">Perak</option>
+										<option value="Perlis">Perlis</option>
+										<option value="Terengganu">Terengganu</option>
+										<option value="Sabah">Sabah</option>
+										<option value="Sarawak">Sarawak</option>
+										<option value="Selangor">Selangor</option>
 									</select>
 
 									@error('location')
@@ -123,7 +128,7 @@
 
 							<div class="col-12 text-center">
 								<div class="form-group">
-									<input type="checkbox" value="agree" name="checkbox"> I agreed with <a href="#">Term and Condition</a>.
+									<input type="checkbox" value="agree" name="checkbox"> I agree to the <a href="#">Terms of Use</a> and <a href="#">Privacy Policy</a>.
 									@error('checkbox')
 									<div style="color:darkred;">{{ $message }}</div>
 									@enderror
@@ -191,7 +196,7 @@
 
 			/* Desktop only style */
 			@media (min-width:768px) {
-				.menu-container{height: 60px}
+				.menu-container{height: 80px}
 
 				.form{
 					margin: 20px;
